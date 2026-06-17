@@ -47,22 +47,31 @@ function moveSlide(direction){
 
 const form = document.getElementById("rsvpForm");
 
-form.addEventListener("submit", async (e)=>{
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-e.preventDefault();
+    const data = {
+        nombre: document.getElementById("nombre").value,
+        asistentes: document.getElementById("asistentes").value
+    };
 
-const data = {
-nombre: document.getElementById("nombre").value,
-asistentes: document.getElementById("asistentes").value
-};
+    try {
 
-await fetch(WEBAPP_URL,{
-method:"POST",
-body:JSON.stringify(data)
-});
+        await fetch(WEBAPP_URL, {
+            method: "POST",
+            mode: "no-cors", // 🔴 IMPORTANTE para Google Apps Script
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
 
-alert("Confirmación enviada");
+        alert("¡Confirmación enviada correctamente!");
 
-form.reset();
+        form.reset();
 
+    } catch (error) {
+        console.error(error);
+        alert("Error al enviar la confirmación");
+    }
 });
