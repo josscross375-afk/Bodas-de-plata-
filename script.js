@@ -50,28 +50,22 @@ const form = document.getElementById("rsvpForm");
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const data = {
-        nombre: document.getElementById("nombre").value,
-        asistentes: document.getElementById("asistentes").value
-    };
+    const nombre = document.getElementById("nombre").value;
+    const asistentes = document.getElementById("asistentes").value;
+
+    const url = WEBAPP_URL
+        + "?nombre=" + encodeURIComponent(nombre)
+        + "&asistentes=" + encodeURIComponent(asistentes);
 
     try {
 
-        await fetch(WEBAPP_URL, {
-            method: "POST",
-            mode: "no-cors", // 🔴 IMPORTANTE para Google Apps Script
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        });
+        await fetch(url);
 
         alert("¡Confirmación enviada correctamente!");
-
         form.reset();
 
     } catch (error) {
         console.error(error);
-        alert("Error al enviar la confirmación");
+        alert("Error al enviar");
     }
 });
