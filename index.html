@@ -63,17 +63,29 @@
     </a>
 </section>
 
-<!-- GALERÍA -->
+<!-- GALERÍA PREMIUM -->
 <section class="galeria">
+
     <h2>Recuerdos</h2>
 
-    <div class="grid-img">
-        <img src="images/foto1.jpg">
-        <img src="images/foto2.jpg">
-        <img src="images/foto3.jpg">
-        <img src="images/foto4.jpg">
-        <img src="images/foto5.jpg">
+    <div class="slider-container">
+
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+
+        <div class="slider" id="slider">
+
+            <img src="images/foto1.jpg" class="slide">
+            <img src="images/foto2.jpg" class="slide">
+            <img src="images/foto3.jpg" class="slide">
+            <img src="images/foto4.jpg" class="slide">
+            <img src="images/foto5.jpg" class="slide">
+
+        </div>
+
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
     </div>
+
 </section>
 
 <!-- RSVP -->
