@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bodas de Plata | Ricardo & Leonor</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HERO -->
+<header class="hero">
+    <img src="images/portada.jpg" class="hero-img">
+    <h1>Ricardo & Leonor</h1>
+    <h2>Bodas de Plata</h2>
+    <p>11 de Octubre 2026</p>
+</header>
+
+<!-- MENSAJE -->
+<section class="mensaje">
+    <h2>Nuestra Historia</h2>
+    <p>
+        Hace 25 años comenzamos un camino juntos.
+        Hoy celebramos amor, unión y vida compartida.
+    </p>
+</section>
+
+<!-- CONTADOR -->
+<section class="contador">
+    <h2>Faltan</h2>
+
+    <div class="grid">
+        <div><span id="days">0</span><p>Días</p></div>
+        <div><span id="hours">0</span><p>Horas</p></div>
+        <div><span id="minutes">0</span><p>Min</p></div>
+        <div><span id="seconds">0</span><p>Seg</p></div>
+    </div>
+</section>
+
+<!-- EVENTOS -->
+<section class="evento">
+    <h2>Ceremonia Religiosa</h2>
+    <p>Zapote, Veracruz</p>
+
+    <a class="btn" href="https://www.google.com/maps?q=Zapote+Veracruz" target="_blank">
+        Ver ubicación
+    </a>
+</section>
+
+<section class="evento">
+    <h2>Recepción</h2>
+    <p>Providencia, Veracruz</p>
+
+    <a class="btn" href="https://www.google.com/maps?q=Providencia+Veracruz" target="_blank">
+        Ver ubicación
+    </a>
+</section>
+
+<!-- GALERÍA -->
+<section class="galeria">
+    <h2>Recuerdos</h2>
+
+    <div class="grid-img">
+        <img src="images/foto1.jpg">
+        <img src="images/foto2.jpg">
+        <img src="images/foto3.jpg">
+        <img src="images/foto4.jpg">
+        <img src="images/foto5.jpg">
+    </div>
+</section>
+
+<!-- RSVP -->
+<section class="confirmacion">
+    <h2>Confirmación</h2>
+
+    <p>Antes del 26 de Septiembre 2026</p>
+
+    <form id="rsvpForm">
+
+        <input id="nombre" type="text" placeholder="Nombre completo" required>
+
+        <input id="asistentes" type="number" placeholder="Número de asistentes" required>
+
+        <button type="submit">Confirmar asistencia</button>
+
+    </form>
+</section>
+
+<footer>
+    <h2>Ricardo & Leonor</h2>
+    <p>Gracias por acompañarnos</p>
+</footer>
+
+<script>
+const WEBAPP_URL = "https://script.google.com/macros/s/AKfycbx70dvydcU_FdM6MyzfK6emVs-dWTzPN0wpCbEe1-g9dytIwhadXfm4sfWcQT-1Uvi14Q/exec";
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
