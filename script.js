@@ -23,6 +23,25 @@ clearInterval(countdown);
 
 },1000);
 
+let currentSlide = 0;
+
+function moveSlide(direction){
+
+    const slider = document.getElementById("slider");
+    const slides = document.querySelectorAll(".slide");
+
+    currentSlide += direction;
+
+    if(currentSlide < 0){
+        currentSlide = slides.length - 1;
+    }
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
 
 // FORMULARIO GOOGLE SHEETS
 
